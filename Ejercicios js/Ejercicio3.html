@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title>Ejercicio 1 - JavaScript</title>
+</head>
+<body>
+    <h2>Respuestas del Ejercicio 1</h2>
+    
+    <h3>1. Tipos de datos en JavaScript</h3>
+    <p id="tiposDatos"></p>
+
+    <h3>2. Definicion de Arreglo</h3>
+    <p id="defArreglo"></p>
+
+    <h3>3. Eliminar segundo elemento de un arreglo</h3>
+    <p id="borrarElemento"></p>
+
+    <h3>4. Alternativas de Expresiones</h3>
+    <p id="expresiones"></p>
+
+    <h3>5. Valores finales de las variables</h3>
+    <p id="valoresFinales"></p>
+
+    <script>
+        let tiposDatos = [
+            "Number (Ejemplo: let edad = 25;)",
+            "String (Ejemplo: let nombre = 'Juan';)",
+            "Boolean (Ejemplo: let esMayor = true;)",
+            "Array (Ejemplo: let numeros = [1, 2, 3];)"
+        ];
+        document.getElementById("tiposDatos").innerHTML = tiposDatos.join("<br>");
+
+        let arreglo = ["Manzana", "Banana", "Cereza"];
+        document.getElementById("defArreglo").innerHTML = 
+            "Un arreglo es una estructura de datos que permite almacenar multiples valores en una sola variable. <br>" +
+            "Ejemplo: " + JSON.stringify(arreglo);
+
+        arreglo.splice(1, 1);
+        document.getElementById("borrarElemento").innerHTML = 
+            "Arreglo despues de eliminar el segundo elemento: " + JSON.stringify(arreglo);
+
+        let expresiones = [
+            "Algo += ' aumentar ';  →  Algo = Algo + ' aumentar ';",
+            "Y = Y + X;  →  Y += X;",
+            "Nombres = Nombres + ' Riascos';  →  Nombres += ' Riascos';",
+            "T = T % 8;  →  T %= 8;",
+            "++A;  →  A = A + 1;",
+            "Z = Z / 5 + 45;  →  Z /= 5; Z += 45;"
+        ];
+        document.getElementById("expresiones").innerHTML = expresiones.join("<br>");
+
+        let Z = 25;
+        let X = ++Z;  
+        let W = X-- + Z;  
+        let Y = (X % Z + 3);  
+        let V = (X / W >= Z);  
+      
+        Z = -26;
+        X = -25;
+        W = -52;
+        Y = -28;
+
+        document.getElementById("valoresFinales").innerHTML =
+        "X = " + X + ", W = " + W + ", Y = " + Y + ", Z = " + Z + ", V = " + V;
+    </script>
+</body>
+</html>

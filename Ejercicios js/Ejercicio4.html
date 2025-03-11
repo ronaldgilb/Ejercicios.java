@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>Ejercicio 4 - Cálculo de Áreas</title>
+</head>
+<body>
+    <h2>Cálculo de Áreas</h2>
+    <div id="resultado"></div>
+
+    <script>
+       
+        function cuadrado(l) {
+            return l * l;
+        }
+
+        function rectangulo(l1, l2) {
+            return l1 * l2;
+        }
+
+        function triangulo(b, h) {
+            return (b * h) / 2;
+        }
+
+        function mostrarResultados() {
+            let autor = "Ronald Gil Breton"; 
+
+            let ladoCuadrado = 5;
+            let baseRectangulo = 8, alturaRectangulo = 4;
+            let baseTriangulo = 20, alturaTriangulo = 10;
+
+            let resultadoHTML = `
+                <p><strong>Autor:</strong> ${autor}</p>
+                <p>Área del cuadrado de lado ${ladoCuadrado} cm = ${cuadrado(ladoCuadrado)} cm²</p>
+                <p>Área del rectángulo de base ${baseRectangulo} cm y altura ${alturaRectangulo} cm = ${rectangulo(baseRectangulo, alturaRectangulo)} cm²</p>
+                <p>Área del triángulo de base ${baseTriangulo} cm y altura ${alturaTriangulo} cm = ${triangulo(baseTriangulo, alturaTriangulo)} cm²</p>
+            `;
+
+            document.getElementById("resultado").innerHTML = resultadoHTML;
+        }
+
+        window.onload = mostrarResultados;
+    </script>
+</body>
+</html>

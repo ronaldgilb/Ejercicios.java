@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+
+    <title>Datos del Estudiante</title>
+</head>
+<body>
+    <h2>Informacion del Estudiante</h2>
+    <div id="datos"></div>
+
+    <script>
+        let nombre = "Edgar Francisco";
+        let edad = 25;
+        let ciudad = "Ciudad de Mexico";
+
+        document.getElementById("datos").innerHTML = `
+            <b>Nombre:</b> ${nombre} <br>
+            <b>Edad:</b> ${edad} anos <br>
+            <b>Ciudad:</b> ${ciudad} <br><hr>
+        `;
+    </script>
+</body>
+</html>
